@@ -14,7 +14,7 @@ Kotlin, no layout XML (the UI is built in code), custom vector icons throughout.
 > compiled or run on a device by its author's tooling**. Expect to fix build errors on first sync, and treat every
 > "works on ROM X" claim below as unverified until you have tried it on your own phone.
 
-> **UI redesign in progress** (HyperOS Game Turbo x RedMagic landscape console). Plan and per-part notes: [docs/REDESIGN_PLAN.md](docs/REDESIGN_PLAN.md).
+> **UI redesign in progress** (HyperOS Game Turbo x RedMagic landscape console).
 
 ## What it does
 
@@ -85,8 +85,7 @@ These limits come from Android, not from missing effort. The app labels them in 
 
 ## Permissions
 
-Every permission in `AndroidManifest.xml` has a caller in the code (reviewed in Phase 3 / Part 3, see
-[docs/PHASE3_NOTES.md](docs/PHASE3_NOTES.md); landscape HUD and console features: [docs/PHASE3_LANDSCAPE_NOTES.md](docs/PHASE3_LANDSCAPE_NOTES.md)). Three deserve attention before you publish:
+Every permission in `AndroidManifest.xml` has a caller in the code. landscape HUD and console features. Three deserve attention before you publish:
 
 - `QUERY_ALL_PACKAGES`: needed to list installed games. **Google Play restricts this permission** and requires a declaration;
   a GitHub / F-Droid build is not affected.
@@ -109,9 +108,9 @@ docs/        phase notes: what was built, how, and the known limits of each part
 
 ## Development notes
 
-- **Part 9:** ROM Lab tab in Game Space (live Hz / 1% low / temperature, AOT compile, AnTuTu prep, panel lock). See [docs/PART9_NOTES.md](docs/PART9_NOTES.md).
-- **Part 10:** `GameSessionGuard` locks the panel and starts the frame smoother when a game comes forward, and restores both afterwards. See [docs/PART10_NOTES.md](docs/PART10_NOTES.md).
-- **Part 11:** 12 bug fixes and lag reductions (clip buffer crash, main-thread stalls, per-frame allocations). See [docs/PART11_FIX_NOTES.md](docs/PART11_FIX_NOTES.md).
+- **Part 9:** ROM Lab tab in Game Space (live Hz / 1% low / temperature, AOT compile, AnTuTu prep, panel lock).
+- **Part 10:** `GameSessionGuard` locks the panel and starts the frame smoother when a game comes forward, and restores both afterwards.
+- **Part 11:** 12 bug fixes and lag reductions (clip buffer crash, main-thread stalls, per-frame allocations).
 
 ## Contributing
 
